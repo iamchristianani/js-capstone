@@ -35,3 +35,16 @@ header {
   justify-content: center;
   padding: 0;
 }
+
+footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+footer p {
+  padding: 0 30px;
+}
