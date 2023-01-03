@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"html,\\r\\nbody {\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n  font-family: Lato, sans-serif;\\r\\n  font-weight: bold;\\r\\n}\\r\\n\\r\\nbody {\\r\\n  padding: 0;\\r\\n  margin: 0;\\r\\n  min-height: 100vh;\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n}\\r\\n\\r\\nheader {\\r\\n  display: flex;\\r\\n  justify-content: space-around;\\r\\n  background: #333;\\r\\n  color: #fff;\\r\\n}\\r\\n\\r\\n.logo {\\r\\n  display: flex;\\r\\n  justify-content: center;\\r\\n  align-items: center;\\r\\n}\\r\\n\\r\\n.nav-list {\\r\\n  list-style: none;\\r\\n  display: flex;\\r\\n  column-gap: 30px;\\r\\n  align-items: center;\\r\\n  justify-content: center;\\r\\n  padding: 0;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://gavot/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"html,\\r\\nbody {\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n  font-family: Lato, sans-serif;\\r\\n  font-weight: bold;\\r\\n}\\r\\n\\r\\nbody {\\r\\n  padding: 0;\\r\\n  margin: 0;\\r\\n  min-height: 100vh;\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n}\\r\\n\\r\\nheader {\\r\\n  display: flex;\\r\\n  justify-content: space-around;\\r\\n  background: #333;\\r\\n  color: #fff;\\r\\n}\\r\\n\\r\\n.logo {\\r\\n  display: flex;\\r\\n  justify-content: center;\\r\\n  align-items: center;\\r\\n}\\r\\n\\r\\n.nav-list {\\r\\n  list-style: none;\\r\\n  display: flex;\\r\\n  column-gap: 100px;\\r\\n  align-items: center;\\r\\n  justify-content: center;\\r\\n  padding: 0;\\r\\n}\\r\\n\\r\\nmain {\\r\\n  display: flex;\\r\\n  justify-content: center;\\r\\n  align-items: center;\\r\\n}\\r\\n\\r\\n.all-movie {\\r\\n  width: 90%;\\r\\n  list-style: none;\\r\\n  padding: 0;\\r\\n  display: flex;\\r\\n  justify-content: center;\\r\\n  flex-wrap: wrap;\\r\\n  row-gap: 30px;\\r\\n  column-gap: 30px;\\r\\n  margin-top: 70px;\\r\\n  margin-bottom: 70px;\\r\\n}\\r\\n\\r\\n.each-movie {\\r\\n  background-color: #E69A8D;\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  justify-content: center;\\r\\n  align-items: center;\\r\\n  padding: 20px;\\r\\n}\\r\\n\\r\\n.image-container {\\r\\n  width: 180px;\\r\\n}\\r\\n\\r\\n.each-movie img {\\r\\n  width: 100%;\\r\\n}\\r\\n\\r\\n.name-and-likes {\\r\\n  display: flex;\\r\\n  flex-direction: column;\\r\\n  justify-content: center;\\r\\n  align-items: center;\\r\\n  column-gap: 10px;\\r\\n}\\r\\n\\r\\n.name-and-likes h3 {\\r\\n  margin-bottom: 0;\\r\\n}\\r\\n\\r\\n.likes {\\r\\n  margin: 10px 0;\\r\\n}\\r\\n\\r\\n.comment {\\r\\n  padding: 10px;\\r\\n  background-color: #5F4B8B;\\r\\n  color: #fff;\\r\\n  border: none;\\r\\n  border-radius: 3px;\\r\\n}\\r\\n\\r\\nfooter {\\r\\n  width: 100%;\\r\\n  background-color: #333;\\r\\n  color: #fff;\\r\\n  display: flex;\\r\\n  align-items: center;\\r\\n  margin-top: auto;\\r\\n}\\r\\n\\r\\nfooter p {\\r\\n  padding: 0 30px;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://gavot/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -116,7 +116,47 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://gavot/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_renderList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/renderList */ \"./src/modules/renderList.js\");\n\r\n\r\n\r\nwindow.addEventListener('load', () => {\r\n  (0,_modules_renderList__WEBPACK_IMPORTED_MODULE_1__.displayMovie)();\r\n})\n\n//# sourceURL=webpack://gavot/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/apiCall.js":
+/*!********************************!*\
+  !*** ./src/modules/apiCall.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getMovie\": () => (/* binding */ getMovie)\n/* harmony export */ });\nconst API_URL = \"https://api.tvmaze.com/shows\";\r\n\r\nconst getMovie = async () => {\r\n  const res = await fetch(API_URL);\r\n  const json = await res.json();\r\n  const data = json.slice(0, 16)\r\n  return data;\r\n};\n\n//# sourceURL=webpack://gavot/./src/modules/apiCall.js?");
+
+/***/ }),
+
+/***/ "./src/modules/movieList.js":
+/*!**********************************!*\
+  !*** ./src/modules/movieList.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createList\": () => (/* binding */ createList)\n/* harmony export */ });\n/* harmony import */ var _apiCall_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./apiCall.js */ \"./src/modules/apiCall.js\");\n\r\n\r\nconst createList = async () => {\r\n  const movieArr = [];\r\n  const movieList = await (0,_apiCall_js__WEBPACK_IMPORTED_MODULE_0__.getMovie)();\r\n  movieList.forEach((movie) => {\r\n    const newArr = {\r\n      id: movie.id,\r\n      name: movie.name,\r\n      moviePoster: movie.image.original,\r\n      altTitle: movie.name,\r\n      description: movie.summary\r\n    }\r\n    movieArr.push(newArr);\r\n  })\r\n  return movieArr;\r\n}\n\n//# sourceURL=webpack://gavot/./src/modules/movieList.js?");
+
+/***/ }),
+
+/***/ "./src/modules/renderList.js":
+/*!***********************************!*\
+  !*** ./src/modules/renderList.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayMovie\": () => (/* binding */ displayMovie)\n/* harmony export */ });\n/* harmony import */ var _variableList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./variableList */ \"./src/modules/variableList.js\");\n/* harmony import */ var _movieList_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./movieList.js */ \"./src/modules/movieList.js\");\n\r\n\r\n\r\nconst displayMovie = async () => {\r\n  const movieArr = await (0,_movieList_js__WEBPACK_IMPORTED_MODULE_1__.createList)();\r\n\r\n  _variableList__WEBPACK_IMPORTED_MODULE_0__.allMovie.innerHTML = ``;\r\n  movieArr.forEach((movie) => {\r\n    const oneMovie = document.createElement('li');\r\n    oneMovie.className = \"each-movie\";\r\n    oneMovie.innerHTML = `\r\n      <div class=\"image-container movie-${movie.id}\">\r\n          <img src=\"${movie.moviePoster}\" alt=\"${movie.altTitle}\">\r\n      </div>\r\n      <div class=\"name-and-likes\">\r\n          <h3>${movie.name}</h3>\r\n          <div class=\"likes\">\r\n            <i class=\"fa-regular fa-heart\"></i>\r\n            <span class=\"like-counter\">1</span> \r\n          </div>\r\n      </div>\r\n      <button class=\"comment\">Comment</button>\r\n    `;\r\n    _variableList__WEBPACK_IMPORTED_MODULE_0__.allMovie.appendChild(oneMovie);\r\n  })\r\n}\n\n//# sourceURL=webpack://gavot/./src/modules/renderList.js?");
+
+/***/ }),
+
+/***/ "./src/modules/variableList.js":
+/*!*************************************!*\
+  !*** ./src/modules/variableList.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"allMovie\": () => (/* binding */ allMovie)\n/* harmony export */ });\nconst allMovie = document.querySelector(\".all-movie\");\n\n//# sourceURL=webpack://gavot/./src/modules/variableList.js?");
 
 /***/ })
 
