@@ -1,10 +1,14 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  devServer: {
-    static: './dist',
+  entry: './src/index.js',
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
   },
+
   module: {
     rules: [
       {
@@ -13,17 +17,18 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
+        type: 'asset/resource',
       },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
+      { test: /\.txt$/, use: 'raw-loader' },
     ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
       template: './src/index.html',
     }),
   ],
