@@ -1,6 +1,7 @@
 /* eslint-disable guard-for-in */
 const popDiv = document.getElementById('popDiv');
 const showCommentModal = (movie) => {
+  popDiv.style.display = 'flex';
   const popUpContainer = document.createElement('div');
   popUpContainer.classList.add('popUpContainer');
 
@@ -15,7 +16,7 @@ const showCommentModal = (movie) => {
   // popUpCloseBtn.innerText = 'colse';
   popUpCloseBtn.classList.add('popUpCloseBtn', 'fa-solid', 'fa-close', 'closeIcon');
   popUpCloseBtn.addEventListener('click', () => {
-    popUpContainer.style.display = 'none';
+    popDiv.style.display = 'none';
     // document.location.reload;
   });
   popUpTopDiv.append(movieImg, popUpCloseBtn);
@@ -55,16 +56,10 @@ const showCommentModal = (movie) => {
 
   const movieratingContainer = document.createElement('div');
 
-  // eslint-disable-next-line no-restricted-syntax
-  for (const rating in movie.rating) {
-    const movieRating = document.createElement('p');
-    movieRating.classList.add('movieRating');
-    // movieRating.innerText = 'Rating:';
-    const movieRatingValue = document.createElement('p');
-    movieRatingValue.classList.add('movieRatingValue');
-    movieRatingValue.innerText = `Rating: ${rating.average}`;
-    movieratingContainer.append(movieRating, movieRatingValue);
-  }
+  const movieRatingValue = document.createElement('p');
+  movieRatingValue.classList.add('movieRatingValue');
+  movieRatingValue.innerText = `Rating: ${movie.rating.average}`;
+  movieratingContainer.append(movieRatingValue);
 
   const popUpBottomLeft = document.createElement('div');
   popUpBottomLeft.append(movieLanguage, movieratingContainer, officialSiteLink);

@@ -113,15 +113,15 @@ footer p {
 .popUpContainer {
   border: 2px solid burlywood;
   position: fixed;
-  top: 75px;
+  top: 30px;
   padding: 60px;
-  right: 40vh;
+  right: 44vh;
   bottom: 2vh;
   background-color: bisque;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 10px 20px 4px rgb(76, 6, 6);
+  box-shadow: 0 5px 20px 3px rgb(132, 119, 119);
 }
 
 .movieImg {
@@ -161,4 +161,16 @@ footer p {
 
 .officialSiteLink {
   font-weight: bolder;
+}
+
+.popDiv {
+  position: fixed;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(3px);
 }
