@@ -1,76 +1,78 @@
+/* eslint-disable guard-for-in */
 const popDiv = document.getElementById('popDiv');
 const showCommentModal = (movie) => {
-  console.log(movie)
+  const popUpContainer = document.createElement('div');
+  popUpContainer.classList.add('popUpContainer');
 
-const popUpContainer = document.createElement('div');
-popUpContainer.classList.add('popUpContainer');
+  const popUpTopDiv = document.createElement('div');
+  popUpTopDiv.classList.add('popUpTopDiv');
 
-const popUpTopDiv = document.createElement('div');
-popUpTopDiv.classList.add('popUpTopDiv');
+  const movieImg = document.createElement('img');
+  movieImg.classList.add('movieImg');
+  movieImg.setAttribute('src', movie.image.original);
 
-const movieImg = document.createElement('img');
-movieImg.classList.add('movieImg');
-movieImg.setAttribute('src', movie.image.original);
+  const popUpCloseBtn = document.createElement('i');
+  // popUpCloseBtn.innerText = 'colse';
+  popUpCloseBtn.classList.add('popUpCloseBtn', 'fa-solid', 'fa-close', 'closeIcon');
+  popUpCloseBtn.addEventListener('click', () => {
+    popUpContainer.style.display = 'none';
+    // document.location.reload;
+  });
+  popUpTopDiv.append(movieImg, popUpCloseBtn);
 
-const popUpCloseBtn = document.createElement('i');
-popUpCloseBtn.innerText = 'colse';
-popUpCloseBtn.classList.add('popUpCloseBtn');
+  const popUpBottomDiv = document.createElement('div');
+  popUpBottomDiv.classList.add('popUpBottomDiv');
 
-popUpTopDiv.append(movieImg, popUpCloseBtn);
+  const movieName = document.createElement('h3');
+  movieName.classList.add('movieName');
+  movieName.innerText = movie.name;
 
-const popUpBottomDiv = document.createElement('div');
-popUpBottomDiv.classList.add('popUpBottomDiv');
+  const popUpBottomRight = document.createElement('div');
+  const genreList = document.createElement('ul');
+  genreList.classList.add('genreList');
 
-const movieName = document.createElement('h3');
-movieName.classList.add('movieName');
-movieName.innerText = movie.name;
+  movie.genres.forEach((genre) => {
+    const genreItem = document.createElement('li');
+    genreItem.classList.add('genreItem');
+    genreItem.innerText = genre;
+    genreList.append(genreItem);
+  });
 
-const popUpBottomRight = document.createElement('div');
-const genreList = document.createElement('ul');
-genreList.classList.add('genreList');
+  const genreText = document.createElement('p');
+  genreText.classList.add('genreText');
+  genreText.innerText = 'Genres';
 
-movie.genres.forEach((genre) => {
-  const genreItem = document.createElement('li');
-  genreItem.classList.add('genreItem');
-  genreItem.innerText = genre;
-  genreList.append(genreItem);
-});
+  popUpBottomRight.append(genreText, genreList);
 
-const genreText = document.createElement('p');
-genreText.classList.add('genreText');
-genreText.innerText = 'Genres';
+  const officialSiteLink = document.createElement('a');
+  officialSiteLink.classList.add('officialSiteLink');
+  officialSiteLink.setAttribute('href', movie.officialSite);
+  officialSiteLink.innerText = 'Visit Site';
 
-popUpBottomRight.append(genreText, genreList);
+  const movieLanguage = document.createElement('p');
+  movieLanguage.classList.add('movieLanguage');
+  movieLanguage.innerText = `Langauge: ${movie.language}`;
 
-const officialSiteLink = document.createElement('a');
-officialSiteLink.classList.add('officialSiteLink');
-officialSiteLink.setAttribute('href', movie.officialSite);
-officialSiteLink.innerText = 'Visit Site';
+  const movieratingContainer = document.createElement('div');
 
-const movieLanguage = document.createElement('p');
-movieLanguage.classList.add('movieLanguage');
-movieLanguage.innerText = movie.language;
+  // eslint-disable-next-line no-restricted-syntax
+  for (const rating in movie.rating) {
+    const movieRating = document.createElement('p');
+    movieRating.classList.add('movieRating');
+    // movieRating.innerText = 'Rating:';
+    const movieRatingValue = document.createElement('p');
+    movieRatingValue.classList.add('movieRatingValue');
+    movieRatingValue.innerText = `Rating: ${rating.average}`;
+    movieratingContainer.append(movieRating, movieRatingValue);
+  }
 
-const movieratingContainer = document.createElement('div');
+  const popUpBottomLeft = document.createElement('div');
+  popUpBottomLeft.append(movieLanguage, movieratingContainer, officialSiteLink);
 
-for( let rating in movie.rating) {
-  const movieRating = document.createElement('p');
-  movieRating.classList.add('movieRating');
-  movieRating.innerText = 'Rating:';
-  const movieRatingValue = document.createElement('p')
-movieRatingValue.classList.add('movieRatingValue');
-movieRatingValue.innerText = rating;
-movieratingContainer.append(movieRating, movieRatingValue);
-}
+  popUpBottomDiv.append(popUpBottomRight, popUpBottomLeft);
 
-
-const popUpBottomLeft = document.createElement('div');
-popUpBottomLeft.append(movieLanguage, movieratingContainer, officialSiteLink);
-
-popUpBottomDiv.append(popUpBottomRight, popUpBottomLeft);
-
-popDiv.append(popUpTopDiv, popUpBottomDiv);
-
-}
+  popUpContainer.append(popUpTopDiv, movieName, popUpBottomDiv);
+  popDiv.append(popUpContainer);
+};
 
 export default showCommentModal;

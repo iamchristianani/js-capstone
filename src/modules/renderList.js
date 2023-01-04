@@ -5,9 +5,9 @@ import getMovie from './apiCall.js';
 
 const getMovies = async (e) => {
   const movies = await getMovie();
-  const movie = movies.filter((movie) => JSON.stringify(movie.id ) === e.target.id);
+  const movie = movies.filter((movie) => JSON.stringify(movie.id) === e.target.id);
   showCommentModal(movie[0]);
-}
+};
 
 const displayMovie = async () => {
   const movieArr = await createList();
@@ -29,11 +29,9 @@ const displayMovie = async () => {
       </div>
     `;
     const commmentBtn = document.createElement('button');
-    commmentBtn.innerText = "Comment";
+    commmentBtn.innerText = 'Comment';
     commmentBtn.classList.add('comment');
     commmentBtn.setAttribute('id', movie.id);
-
-
 
     commmentBtn.addEventListener('click', (e) => {
       getMovies(e);
