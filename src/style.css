@@ -108,3 +108,69 @@ footer {
 footer p {
   padding: 0 30px;
 }
+
+/* Comment popUp Style */
+.popUpContainer {
+  border: 2px solid burlywood;
+  position: fixed;
+  top: 30px;
+  padding: 60px;
+  right: 44vh;
+  bottom: 2vh;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 5px 20px 3px rgb(132, 119, 119);
+}
+
+.movieImg {
+  width: 100vh;
+  height: 50vh;
+}
+
+.popUpCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: larger;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.popUpCloseBtn:hover {
+  background-color: red;
+}
+
+.movieName {
+  text-align: center;
+  font-size: 26px;
+  color: rebeccapurple;
+}
+
+.popUpBottomDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.genreItem {
+  list-style-type: disc;
+}
+
+.officialSiteLink {
+  font-weight: bolder;
+}
+
+.popDiv {
+  position: fixed;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(3px);
+}
