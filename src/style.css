@@ -88,6 +88,10 @@ main {
   margin: 10px 0;
 }
 
+.like-icon {
+  cursor: pointer;
+}
+
 .comment {
   padding: 10px;
   background-color: #5f4b8b;
