@@ -1,5 +1,6 @@
 import allMovie from './variableList.js';
 import createList from './movieList.js';
+import { countLikes } from './involvementAPICalls.js';
 
 const displayMovie = async () => {
   const movieArr = await createList();
@@ -15,8 +16,8 @@ const displayMovie = async () => {
       <div class="name-and-likes">
           <h3>${movie.name}</h3>
           <div class="likes">
-            <i class="fa-regular fa-heart"></i>
-            <span class="like-counter">1</span> 
+            <i data-id="${movie.id}" class="fa-regular fa-heart like-icon"></i>
+            <span data-id="${movie.id}" class="like-counter"></span> 
           </div>
       </div>
       <button class="comment">Comment</button>
@@ -25,4 +26,13 @@ const displayMovie = async () => {
   });
 };
 
-export default displayMovie;
+const showLikes = async (likes) => {
+  const movieID = likes.getAttribute('data-id');
+  const noOfLikes = await countLikes();
+  const likeAmount = noOfLikes.filter((likeObj) => likeObj.item_id === movieID);
+  if (likeAmount.length > 0) {
+    likes.textContent = `${likeAmount[0].likes}`;
+  }
+};
+
+export { displayMovie, showLikes };
