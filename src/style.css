@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: Lato, sans-serif;
   font-weight: bold;
+  box-sizing: border-box;
 }
 
 body {
@@ -113,6 +114,18 @@ footer p {
   padding: 0 30px;
 }
 
+.popDiv {
+  position: fixed;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(3px);
+}
+
 /* Comment popUp Style */
 .popUpContainer {
   border: 2px solid burlywood;
@@ -126,6 +139,14 @@ footer p {
   flex-direction: column;
   justify-content: center;
   box-shadow: 0 5px 20px 3px rgb(132, 119, 119);
+  overflow-y: scroll;
+}
+
+.popUpTopDiv {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .movieImg {
@@ -154,27 +175,98 @@ footer p {
 }
 
 .popUpBottomDiv {
+  flex: 1;
+  margin-top: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 20px;
+}
+
+.genreList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .genreItem {
-  list-style-type: disc;
+  list-style-type: none;
+  font-size: 14px;
 }
 
-.officialSiteLink {
+.officialSiteLink,
+.officialSiteLink:visited {
   font-weight: bolder;
+  text-decoration: none;
+  background-color: #5f4b8b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.712);
+  transition: all 0.3s;
+  backface-visibility: hidden;
 }
 
-.popDiv {
-  position: fixed;
-  top: 0;
-  display: none;
+.officialSiteLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.712);
+}
+
+.officialSiteLink:active {
+  transform: translateY(3px);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.712);
+}
+
+.commentsContainer {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.84);
-  backdrop-filter: blur(3px);
+  gap: 10px;
+  margin: 10px;
+}
+
+.commentContainer {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px 10px;
+  width: 400px;
+}
+
+#commentText {
+  color: rgb(76, 70, 70);
+  margin-top: 20px;
+}
+
+.addCommentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addCommentText {
+  color: #5f4b8b !important;
+}
+
+.input {
+  width: 400px;
+}
+
+.addCommentBtn {
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  align-self: flex-end;
+  margin-right: 130px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-weight: bold;
 }
