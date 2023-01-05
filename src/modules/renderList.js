@@ -1,6 +1,6 @@
-import allMovie from './variableList.js';
+import { allMovie } from './variableList.js';
 import createList from './movieList.js';
-import { countLikes } from './involvementAPICalls.js';
+import { addLiketoAPI, retrieveAPILike } from './involvementAPICalls.js';
 import showCommentModal from './commentPopUp.js';
 import getMovie from './apiCall.js';
 
@@ -43,12 +43,13 @@ const displayMovie = async () => {
   });
 };
 
-const showLikes = async (likes) => {
+const showLikes = async (likes, add, oneID) => {
   const movieID = likes.getAttribute('data-id');
-  const noOfLikes = await countLikes();
+  addLiketoAPI(oneID);
+  const noOfLikes = await retrieveAPILike();
   const likeAmount = noOfLikes.filter((likeObj) => likeObj.item_id === movieID);
   if (likeAmount.length > 0) {
-    likes.textContent = `${likeAmount[0].likes}`;
+    likes.textContent = `${likeAmount[0].likes + add}`;
   }
 };
 
