@@ -1,3 +1,4 @@
 const allMovie = document.querySelector('.all-movie');
+const movieCount = document.querySelector('.movie-counter');
 
-export default allMovie;
+export { allMovie, movieCount };
