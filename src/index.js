@@ -1,6 +1,7 @@
 import './style.css';
 import { displayMovie, showLikes } from './modules/renderList.js';
 import counter from './modules/movieCounter.js';
+import { movieCount } from './modules/variableList.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await displayMovie();
@@ -10,7 +11,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const add = 0;
     await showLikes(likes, add);
   });
-  counter();
+  const allMovies = document.querySelectorAll('.each-movie');
+  movieCount.innerHTML = counter(allMovies);
 });
 
 window.addEventListener('click', async (e) => {

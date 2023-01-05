@@ -1,8 +1,3 @@
-import { movieCount } from './variableList.js';
-
-const counter = () => {
-  const allMovies = document.querySelectorAll('.each-movie');
-  movieCount.innerHTML = allMovies.length;
-};
+const counter = (allMovies) => allMovies.length;
 
 export default counter;
