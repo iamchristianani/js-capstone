@@ -1,22 +1,24 @@
 import './style.css';
 import { displayMovie, showLikes } from './modules/renderList.js';
-import { addLike } from './modules/involvementAPICalls.js';
+import counter from './modules/movieCounter.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await displayMovie();
 
   const likeCounter = document.querySelectorAll('.like-counter');
   likeCounter.forEach(async (likes) => {
-    await showLikes(likes);
+    const add = 0;
+    await showLikes(likes, add);
   });
+  counter();
 });
 
-document.addEventListener('click', async (e) => {
+window.addEventListener('click', async (e) => {
   const likeBtn = e.target;
   if (likeBtn.classList.contains('like-icon')) {
     const movieID = likeBtn.getAttribute('data-id');
-    await addLike(movieID);
     const txtlike = likeBtn.nextElementSibling;
-    await showLikes(txtlike);
+    const add = 1;
+    await showLikes(txtlike, add, movieID);
   }
 });
