@@ -1,4 +1,7 @@
 /* eslint-disable guard-for-in */
+import axios from 'axios';
+import getComments from './commentApi';
+
 const popDiv = document.getElementById('popDiv');
 const showCommentModal = (movie) => {
   popDiv.style.display = 'flex';
@@ -66,7 +69,60 @@ const showCommentModal = (movie) => {
 
   popUpBottomDiv.append(popUpBottomRight, popUpBottomLeft);
 
-  popUpContainer.append(popUpTopDiv, movieName, popUpBottomDiv);
+  const commentsContainer = document.createElement('div');
+  commentsContainer.classList.add('commentsContainer');
+
+  getComments(movie.id, commentsContainer, popUpTopDiv);
+
+  popUpContainer.append(commentsContainer);
+
+  const nameInput = document.createElement('input');
+  nameInput.classList.add('input');
+  nameInput.setAttribute('placeholder', 'Enter your name');
+
+  const comment = document.createElement('textarea');
+  comment.classList.add('input');
+  comment.innerText = 'Leave your comment';
+  comment.addEventListener('focusin', () => {
+    comment.innerText = '';
+  });
+
+  comment.addEventListener('focusout', () => {
+    comment.innerText = 'Leave your comment';
+  });
+
+  const addCommentBtn = document.createElement('button');
+  addCommentBtn.classList.add('addCommentBtn');
+  addCommentBtn.innerText = 'Comment';
+  const addCommentContainer = document.createElement('div');
+  addCommentContainer.classList.add('addCommentContainer');
+  addCommentBtn.addEventListener('click', async () => {
+    const commentsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PdPwTOYThYGRxc1LVe9e/comments';
+    const data = {
+      item_id: movie.id,
+      username: nameInput.value,
+      comment: comment.value,
+    };
+    try {
+      // eslint-disable-next-line no-unused-vars
+      const result = await axios.post(commentsUrl, data);
+      commentsContainer.innerHTML = '';
+      getComments(movie.id, commentsContainer, popUpTopDiv);
+      return result;
+    } catch (error) {
+      return error;
+    }
+  });
+
+  const addCommentText = document.createElement('h4');
+  addCommentBtn.classList.add('addCommentText');
+  addCommentText.innerText = 'Add a comment';
+  addCommentContainer.append(addCommentText, nameInput, comment, addCommentBtn);
+
+  popUpContainer.append(
+    popUpTopDiv, movieName, popUpBottomDiv, commentsContainer, addCommentContainer,
+  );
+
   popDiv.append(popUpContainer);
 };
 
