@@ -3,7 +3,7 @@ import axios from 'axios';
 const getComments = async (id, commentsContainer, popUpTopDiv) => {
   console.log(`id is ${id}`);
   try {
-    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4yNSKG6BShDBPMAgwG9L/comments?item_id=${id}`;
+    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dPFjjUGUAmeW9iUvUDVo/comments?item_id=${id}`;
     const result = await axios.get(url);
 
     const commentText = document.createElement('h3');

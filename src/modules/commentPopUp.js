@@ -98,7 +98,7 @@ const showCommentModal = (movie) => {
   const addCommentContainer = document.createElement('div');
   addCommentContainer.classList.add('addCommentContainer');
   addCommentBtn.addEventListener('click', async () => {
-    const commentsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4yNSKG6BShDBPMAgwG9L/comments';
+    const commentsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dPFjjUGUAmeW9iUvUDVo/comments';
     const data = {
       item_id: movie.id,
       username: nameInput.value,
