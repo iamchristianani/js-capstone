@@ -1,4 +1,3 @@
-/* eslint-disable guard-for-in */
 import axios from 'axios';
 
 import getComments from './commentApi';
@@ -17,11 +16,9 @@ const showCommentModal = (movie) => {
   movieImg.setAttribute('src', movie.image.original);
 
   const popUpCloseBtn = document.createElement('i');
-  // popUpCloseBtn.innerText = 'colse';
   popUpCloseBtn.classList.add('popUpCloseBtn', 'fa-solid', 'fa-close', 'closeIcon');
   popUpCloseBtn.addEventListener('click', () => {
     popDiv.style.display = 'none';
-    // document.location.reload;
   });
   popUpTopDiv.append(movieImg, popUpCloseBtn);
 
