@@ -3,7 +3,7 @@ import axios from 'axios';
 const getComments = async (id, commentsContainer, popUpTopDiv) => {
   console.log(`id is ${id}`);
   try {
-    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PdPwTOYThYGRxc1LVe9e/comments?item_id=${id}`;
+    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4yNSKG6BShDBPMAgwG9L/comments?item_id=${id}`;
     const result = await axios.get(url);
 
     const commentText = document.createElement('h3');
@@ -22,7 +22,7 @@ const getComments = async (id, commentsContainer, popUpTopDiv) => {
       const commentText = document.createElement('p');
       commentText.classList.add('commentText');
       commentText.setAttribute('id', 'commentsText');
-      commentText.innerText = `${item.username}: ${item.comment}`;
+      commentText.innerText = `${item.creation_date}: ${item.username}: ${item.comment}`;
       commentContainer.append(commentText);
       commentsContainer.append(commentContainer);
     });

@@ -1,5 +1,6 @@
 /* eslint-disable guard-for-in */
 import axios from 'axios';
+
 import getComments from './commentApi';
 
 const popDiv = document.getElementById('popDiv');
@@ -97,7 +98,7 @@ const showCommentModal = (movie) => {
   const addCommentContainer = document.createElement('div');
   addCommentContainer.classList.add('addCommentContainer');
   addCommentBtn.addEventListener('click', async () => {
-    const commentsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/PdPwTOYThYGRxc1LVe9e/comments';
+    const commentsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/4yNSKG6BShDBPMAgwG9L/comments';
     const data = {
       item_id: movie.id,
       username: nameInput.value,
