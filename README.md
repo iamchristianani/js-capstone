@@ -1,10 +1,6 @@
 
 <a name="readme-top"></a>
 <div align="center">
-
-  <img src="https://github.com/microverseinc/readme-template/blob/master/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
   <h3><b>JS-Capstone</b></h3>
 </div>
 
@@ -85,7 +81,7 @@ The project has two user interfaces:
 
 ## 🚀 Video Representation <a name="video-rep"></a>
 
-- [Video Representation Link](https://drive.google.com/file/d/1P-eBrY6pn_ZgN93yZXYi6mmhIsn1J6ls/view?usp=share_link)
+- [Video Representation Link](https://drive.google.com/file/d/1zrdRB-1Z_rjhdw_7SYRpkXB1-ukNqxS0/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
