@@ -1,4 +1,4 @@
-import counter from './movieCounter.js';
+import counter from '../modules/movieCounter.js';
 
 describe('Test for Movie Count: ', () => {
   test('6 Movies were added', () => {
