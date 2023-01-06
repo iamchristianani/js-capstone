@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import getComments from './commentApi';
+import getComments from './commentApi.js';
 
 const popDiv = document.getElementById('popDiv');
 const showCommentModal = (movie) => {
@@ -75,11 +75,11 @@ const showCommentModal = (movie) => {
   popUpContainer.append(commentsContainer);
 
   const nameInput = document.createElement('input');
-  nameInput.classList.add('input');
+  nameInput.classList = 'input input-small';
   nameInput.setAttribute('placeholder', 'Enter your name');
 
   const comment = document.createElement('textarea');
-  comment.classList.add('input');
+  comment.classList = 'input input-big';
   comment.innerText = 'Leave your comment';
   comment.addEventListener('focusin', () => {
     comment.innerText = '';
